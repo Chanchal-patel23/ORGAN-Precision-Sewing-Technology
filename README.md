@@ -1,18 +1,32 @@
-# ORGAN – Precision Sewing Technology
+# React + TypeScript + Vite
 
-A professional web development project designed for ORGAN Precision Sewing Technology, focusing on industrial sewing machinery, automation solutions, and advanced manufacturing technologies.
+This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
-### Project Overview
-The website provides a digital platform to present the company's products, industrial capabilities, technological solutions, and business information through a modern and responsive interface.
+Currently, two official plugins are available:
 
-### Key Objectives
-- Professional corporate website presentation
-- Industrial machinery and product showcasing
-- Responsive user interface
-- Structured business information
-- Modern digital brand presence
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-### Project
-**Live Website:** https://srv609487.hstgr.cloud/Organ/
+## React Compiler
 
-**Repository:** ORGAN – Precision Sewing Technology
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+
+## Expanding the Oxlint configuration
+
+If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+
+```json
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["react", "typescript", "oxc"],
+  "options": {
+    "typeAware": true
+  },
+  "rules": {
+    "react/rules-of-hooks": "error",
+    "react/only-export-components": ["warn", { "allowConstantExport": true }]
+  }
+}
+```
+
+See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
